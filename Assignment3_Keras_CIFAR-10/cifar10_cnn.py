@@ -1,4 +1,6 @@
 '''Train a simple deep CNN on the CIFAR10 small images dataset.
+device = cpu0
+device = cpu0
 
 GPU run command:
     THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python cifar10_cnn.py
@@ -19,7 +21,11 @@ from keras.layers.core import Dense, Dropout, Activation, Flatten
 from keras.layers.convolutional import Convolution2D, MaxPooling2D, AveragePooling2D
 from keras.optimizers import SGD
 from keras.utils import np_utils
+# from keras.models import load_model
+import numpy as np
 
+
+quesNo = 0  # to mark the question number, for data saving
 batch_size = 32
 nb_classes = 10
 nb_epoch = 80
@@ -42,7 +48,9 @@ Y_test = np_utils.to_categorical(y_test, nb_classes)
 
 model = Sequential()
 model.add(AveragePooling2D(pool_size=(2,2), input_shape=(img_channels, img_rows, img_cols)))
+# print(model.layers[-1].output_shape)
 model.add(Convolution2D(32, 3, 3, border_mode='same'))
+# print(model.layers[-1].output_shape)
 model.add(Activation('relu'))
 model.add(Convolution2D(32, 3, 3))
 model.add(Activation('relu'))
@@ -74,7 +82,7 @@ X_test /= 255
 
 if not data_augmentation:
     print('Not using data augmentation.')
-    model.fit(X_train, Y_train, batch_size=batch_size,
+    hist = model.fit(X_train, Y_train, batch_size=batch_size,
               nb_epoch=nb_epoch, show_accuracy=True,
               validation_data=(X_test, Y_test), shuffle=True)
 else:
@@ -103,3 +111,16 @@ else:
                         nb_epoch=nb_epoch, show_accuracy=True,
                         validation_data=(X_test, Y_test),
                         nb_worker=1)
+
+# model.save('cifar10_model_%s.h5' %(str(quesNo)))  # creates a HDF5 file 'my_model.h5'
+loss_mat, acc_mat = [],[]
+tmp = hist.history
+print('loss','\n',tmp['loss'])
+loss_mat.append(tmp['loss'])
+loss_mat.append(tmp['val_loss'])
+
+acc_mat.append(tmp['acc'])
+acc_mat.append(tmp['val_acc'])
+
+np.savetxt("%s_loss.csv" %(str(quesNo)), loss_mat, delimiter = ',')
+np.savetxt("%s_acc.csv" %(str(quesNo)), acc_mat, delimiter = ',')
