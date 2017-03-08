@@ -1,0 +1,399 @@
+for_batch + lr:0.01 + mu:0.8 + hidden:100
+
+Loading time is 9.0151 s.
+
+[Epoch 1, mb 1000]    Avg.Loss = 261.996
+    Train Loss: 108.707    Train Acc.: 72.68%
+    Test Loss:  260.636    Test Acc.:  76.45%
+[Epoch 2, mb 1000]    Avg.Loss = 302.909
+    Train Loss: 168.862    Train Acc.: 78.31%
+    Test Loss:  286.313    Test Acc.:  78.00%
+[Epoch 3, mb 1000]    Avg.Loss = 356.155
+    Train Loss: 205.283    Train Acc.: 80.76%
+    Test Loss:  301.289    Test Acc.:  78.55%
+[Epoch 4, mb 1000]    Avg.Loss = 415.040
+    Train Loss: 236.308    Train Acc.: 82.53%
+    Test Loss:  315.655    Test Acc.:  79.85%
+[Epoch 5, mb 1000]    Avg.Loss = 469.066
+    Train Loss: 267.252    Train Acc.: 83.97%
+    Test Loss:  331.467    Test Acc.:  80.60%
+[Epoch 6, mb 1000]    Avg.Loss = 511.862
+    Train Loss: 298.286    Train Acc.: 85.24%
+    Test Loss:  347.601    Test Acc.:  80.85%
+[Epoch 7, mb 1000]    Avg.Loss = 551.120
+    Train Loss: 330.761    Train Acc.: 86.55%
+    Test Loss:  371.685    Test Acc.:  81.35%
+[Epoch 8, mb 1000]    Avg.Loss = 614.162
+    Train Loss: 366.455    Train Acc.: 87.96%
+    Test Loss:  401.244    Test Acc.:  81.50%
+[Epoch 9, mb 1000]    Avg.Loss = 664.332
+    Train Loss: 402.422    Train Acc.: 89.26%
+    Test Loss:  422.004    Test Acc.:  81.85%
+[Epoch 10, mb 1000]    Avg.Loss = 744.604
+    Train Loss: 441.024    Train Acc.: 90.35%
+    Test Loss:  455.658    Test Acc.:  82.05%
+Running time is 523.7599 s.
+
+
+whole_batch + lr:0.01 + mu:0.8 + hidden:100
+Loading time is 8.3031 s.
+
+[Epoch 1, mb 1000]    Avg.Loss = 242.802
+    Train Loss: 100.431    Train Acc.: 72.37%
+    Test Loss:  250.373    Test Acc.:  76.05%
+[Epoch 2, mb 1000]    Avg.Loss = 249.408
+    Train Loss: 173.036    Train Acc.: 78.77%
+    Test Loss:  282.556    Test Acc.:  78.90%
+[Epoch 3, mb 1000]    Avg.Loss = 287.962
+    Train Loss: 212.472    Train Acc.: 81.16%
+    Test Loss:  300.377    Test Acc.:  80.15%
+[Epoch 4, mb 1000]    Avg.Loss = 325.155
+    Train Loss: 246.331    Train Acc.: 83.02%
+    Test Loss:  318.047    Test Acc.:  80.95%
+[Epoch 5, mb 1000]    Avg.Loss = 359.731
+    Train Loss: 279.328    Train Acc.: 84.51%
+    Test Loss:  333.140    Test Acc.:  81.35%
+[Epoch 6, mb 1000]    Avg.Loss = 423.404
+    Train Loss: 312.349    Train Acc.: 86.21%
+    Test Loss:  350.292    Test Acc.:  81.05%
+[Epoch 7, mb 1000]    Avg.Loss = 462.089
+    Train Loss: 347.722    Train Acc.: 87.45%
+    Test Loss:  364.741    Test Acc.:  81.20%
+[Epoch 8, mb 1000]    Avg.Loss = 524.232
+    Train Loss: 382.348    Train Acc.: 88.75%
+    Test Loss:  384.176    Test Acc.:  81.55%
+[Epoch 9, mb 1000]    Avg.Loss = 575.662
+    Train Loss: 418.835    Train Acc.: 89.89%
+    Test Loss:  405.753    Test Acc.:  81.40%
+[Epoch 10, mb 1000]    Avg.Loss = 644.094
+    Train Loss: 456.671    Train Acc.: 91.02%
+    Test Loss:  431.335    Test Acc.:  81.45%
+hidden units: 100, num_batch: 1000, learning rate: 0.0100, momentum: 0.8
+Running time is 291.8757 s.
+
+
+
+Loading time is 8.4326 s.
+
+[Epoch 1, mb 1000]    Avg.Loss = 137.637
+    Train Loss: 59.054    Train Acc.: 68.01%
+    Test Loss:  147.996    Test Acc.:  75.05%
+[Epoch 2, mb 1000]    Avg.Loss = 189.723
+    Train Loss: 133.817    Train Acc.: 77.29%
+    Test Loss:  191.250    Test Acc.:  77.25%
+[Epoch 3, mb 1000]    Avg.Loss = 216.988
+    Train Loss: 166.545    Train Acc.: 79.03%
+    Test Loss:  207.895    Test Acc.:  78.75%
+[Epoch 4, mb 1000]    Avg.Loss = 250.503
+    Train Loss: 187.553    Train Acc.: 80.35%
+    Test Loss:  227.647    Test Acc.:  78.90%
+[Epoch 5, mb 1000]    Avg.Loss = 304.373
+    Train Loss: 206.349    Train Acc.: 81.66%
+    Test Loss:  243.478    Test Acc.:  79.55%
+[Epoch 6, mb 1000]    Avg.Loss = 359.508
+    Train Loss: 223.870    Train Acc.: 82.44%
+    Test Loss:  263.224    Test Acc.:  79.85%
+[Epoch 7, mb 1000]    Avg.Loss = 401.061
+    Train Loss: 239.894    Train Acc.: 83.14%
+    Test Loss:  277.580    Test Acc.:  80.00%
+[Epoch 8, mb 1000]    Avg.Loss = 416.195
+    Train Loss: 254.184    Train Acc.: 83.55%
+    Test Loss:  292.229    Test Acc.:  80.15%
+[Epoch 9, mb 1000]    Avg.Loss = 448.312
+    Train Loss: 268.808    Train Acc.: 84.34%
+    Test Loss:  310.906    Test Acc.:  80.05%
+[Epoch 10, mb 1000]    Avg.Loss = 475.767
+    Train Loss: 282.601    Train Acc.: 84.72%
+    Test Loss:  324.572    Test Acc.:  80.30%
+[Epoch 11, mb 1000]    Avg.Loss = 507.526
+    Train Loss: 296.116    Train Acc.: 85.23%
+    Test Loss:  337.519    Test Acc.:  79.75%
+[Epoch 12, mb 1000]    Avg.Loss = 530.528
+    Train Loss: 308.792    Train Acc.: 85.67%
+    Test Loss:  349.461    Test Acc.:  79.70%
+[Epoch 13, mb 1000]    Avg.Loss = 553.486
+    Train Loss: 321.399    Train Acc.: 86.07%
+    Test Loss:  362.710    Test Acc.:  79.75%
+[Epoch 14, mb 1000]    Avg.Loss = 558.846
+    Train Loss: 333.895    Train Acc.: 86.40%
+    Test Loss:  372.195    Test Acc.:  79.95%
+[Epoch 15, mb 1000]    Avg.Loss = 599.357
+    Train Loss: 346.133    Train Acc.: 86.72%
+    Test Loss:  390.824    Test Acc.:  80.35%
+[Epoch 16, mb 1000]    Avg.Loss = 616.770
+    Train Loss: 357.670    Train Acc.: 87.04%
+    Test Loss:  399.943    Test Acc.:  80.50%
+[Epoch 17, mb 1000]    Avg.Loss = 645.566
+    Train Loss: 369.204    Train Acc.: 87.37%
+    Test Loss:  410.301    Test Acc.:  80.30%
+[Epoch 18, mb 1000]    Avg.Loss = 670.709
+    Train Loss: 379.847    Train Acc.: 87.82%
+    Test Loss:  420.081    Test Acc.:  80.05%
+[Epoch 19, mb 1000]    Avg.Loss = 696.145
+    Train Loss: 391.851    Train Acc.: 87.96%
+    Test Loss:  425.879    Test Acc.:  80.10%
+[Epoch 20, mb 1000]    Avg.Loss = 738.883
+    Train Loss: 403.307    Train Acc.: 88.21%
+    Test Loss:  436.414    Test Acc.:  80.05%
+[Epoch 21, mb 1000]    Avg.Loss = 760.189
+    Train Loss: 415.686    Train Acc.: 88.75%
+    Test Loss:  447.426    Test Acc.:  80.60%
+[Epoch 22, mb 1000]    Avg.Loss = 790.426
+    Train Loss: 427.546    Train Acc.: 88.97%
+    Test Loss:  457.691    Test Acc.:  79.95%
+[Epoch 23, mb 1000]    Avg.Loss = 821.695
+    Train Loss: 440.888    Train Acc.: 89.22%
+    Test Loss:  471.542    Test Acc.:  80.20%
+[Epoch 24, mb 1000]    Avg.Loss = 841.849
+    Train Loss: 452.426    Train Acc.: 89.42%
+    Test Loss:  485.046    Test Acc.:  80.30%
+[Epoch 25, mb 1000]    Avg.Loss = 874.245
+    Train Loss: 466.643    Train Acc.: 89.87%
+    Test Loss:  496.862    Test Acc.:  79.65%
+[Epoch 26, mb 1000]    Avg.Loss = 888.205
+    Train Loss: 479.082    Train Acc.: 90.18%
+    Test Loss:  512.472    Test Acc.:  79.80%
+[Epoch 27, mb 1000]    Avg.Loss = 916.005
+    Train Loss: 494.708    Train Acc.: 90.40%
+    Test Loss:  520.534    Test Acc.:  80.00%
+[Epoch 28, mb 1000]    Avg.Loss = 927.136
+    Train Loss: 505.525    Train Acc.: 90.63%
+    Test Loss:  536.214    Test Acc.:  79.80%
+[Epoch 29, mb 1000]    Avg.Loss = 974.660
+    Train Loss: 522.291    Train Acc.: 90.68%
+    Test Loss:  551.508    Test Acc.:  80.20%
+[Epoch 30, mb 1000]    Avg.Loss = 994.447
+    Train Loss: 535.277    Train Acc.: 90.88%
+    Test Loss:  562.347    Test Acc.:  80.20%
+hidden units: 10, num_batch: 1000, learning rate: 0.0100, momentum: 0.8
+Running time is 89.8829 s.
+
+
+
+
+TestCost_tune_hidden-1.png
+TrainCost_tune_hidden-1.png
+
+
+Loading time is 8.2713 s.
+
+[Epoch 1, mb 100]    Avg.Loss = 2.040
+    Train Loss: 1.899    Train Acc.: 50.02%
+    Test Loss:  1.891    Test Acc.:  50.05%
+[Epoch 2, mb 100]    Avg.Loss = 2.036
+    Train Loss: 1.898    Train Acc.: 51.29%
+    Test Loss:  1.892    Test Acc.:  54.30%
+[Epoch 3, mb 100]    Avg.Loss = 2.022
+    Train Loss: 1.893    Train Acc.: 56.80%
+    Test Loss:  1.888    Test Acc.:  61.10%
+[Epoch 4, mb 100]    Avg.Loss = 1.988
+    Train Loss: 1.875    Train Acc.: 60.84%
+    Test Loss:  1.868    Test Acc.:  64.40%
+[Epoch 5, mb 100]    Avg.Loss = 1.917
+    Train Loss: 1.827    Train Acc.: 62.86%
+    Test Loss:  1.810    Test Acc.:  66.30%
+[Epoch 6, mb 100]    Avg.Loss = 1.773
+    Train Loss: 1.721    Train Acc.: 62.94%
+    Test Loss:  1.687    Test Acc.:  65.90%
+[Epoch 7, mb 100]    Avg.Loss = 1.506
+    Train Loss: 1.511    Train Acc.: 62.79%
+    Test Loss:  1.449    Test Acc.:  65.45%
+[Epoch 8, mb 100]    Avg.Loss = 1.054
+    Train Loss: 1.132    Train Acc.: 62.71%
+    Test Loss:  1.029    Test Acc.:  65.50%
+[Epoch 9, mb 100]    Avg.Loss = 0.303
+    Train Loss: 0.506    Train Acc.: 62.62%
+    Test Loss:  0.361    Test Acc.:  65.35%
+[Epoch 10, mb 100]    Avg.Loss = -0.771
+    Train Loss: -0.441    Train Acc.: 62.60%
+    Test Loss:  -0.597    Test Acc.:  65.10%
+[Epoch 11, mb 100]    Avg.Loss = -2.058
+    Train Loss: -1.711    Train Acc.: 62.87%
+    Test Loss:  -1.797    Test Acc.:  65.50%
+[Epoch 12, mb 100]    Avg.Loss = -3.323
+    Train Loss: -3.183    Train Acc.: 63.01%
+    Test Loss:  -3.080    Test Acc.:  66.10%
+[Epoch 13, mb 100]    Avg.Loss = -4.282
+    Train Loss: -4.634    Train Acc.: 63.30%
+    Test Loss:  -4.214    Test Acc.:  66.35%
+[Epoch 14, mb 100]    Avg.Loss = -4.674
+    Train Loss: -5.804    Train Acc.: 63.54%
+    Test Loss:  -5.011    Test Acc.:  66.20%
+[Epoch 15, mb 100]    Avg.Loss = -4.385
+    Train Loss: -6.525    Train Acc.: 63.78%
+    Test Loss:  -5.354    Test Acc.:  66.50%
+[Epoch 16, mb 100]    Avg.Loss = -3.489
+    Train Loss: -6.740    Train Acc.: 64.18%
+    Test Loss:  -5.227    Test Acc.:  66.75%
+[Epoch 17, mb 100]    Avg.Loss = -2.142
+    Train Loss: -6.463    Train Acc.: 64.57%
+    Test Loss:  -4.668    Test Acc.:  66.85%
+[Epoch 18, mb 100]    Avg.Loss = -0.241
+    Train Loss: -5.718    Train Acc.: 64.70%
+    Test Loss:  -3.660    Test Acc.:  67.45%
+[Epoch 19, mb 100]    Avg.Loss = 2.1832
+    Train Loss: -4.535    Train Acc.: 64.97%
+    Test Loss:  -2.219    Test Acc.:  67.55%
+[Epoch 20, mb 100]    Avg.Loss = 5.0207
+    Train Loss: -2.902    Train Acc.: 65.34%
+    Test Loss:  -0.336    Test Acc.:  67.85%
+[Epoch 21, mb 100]    Avg.Loss = 8.2585
+    Train Loss: -0.826    Train Acc.: 65.50%
+    Test Loss:  1.995    Test Acc.:  68.00%
+[Epoch 22, mb 100]    Avg.Loss = 11.887
+    Train Loss: 1.705    Train Acc.: 65.79%
+    Test Loss:  4.767    Test Acc.:  68.35%
+[Epoch 23, mb 100]    Avg.Loss = 15.828
+    Train Loss: 4.653    Train Acc.: 65.98%
+    Test Loss:  7.945    Test Acc.:  68.60%
+[Epoch 24, mb 100]    Avg.Loss = 20.100
+    Train Loss: 7.950    Train Acc.: 66.20%
+    Test Loss:  11.450    Test Acc.:  68.85%
+[Epoch 25, mb 100]    Avg.Loss = 24.751
+    Train Loss: 11.554    Train Acc.: 66.44%
+    Test Loss:  15.244    Test Acc.:  69.20%
+[Epoch 26, mb 100]    Avg.Loss = 29.587
+    Train Loss: 15.385    Train Acc.: 66.64%
+    Test Loss:  19.208    Test Acc.:  69.30%
+[Epoch 27, mb 100]    Avg.Loss = 34.466
+    Train Loss: 19.343    Train Acc.: 66.77%
+    Test Loss:  23.272    Test Acc.:  69.60%
+[Epoch 28, mb 100]    Avg.Loss = 39.386
+    Train Loss: 23.372    Train Acc.: 66.93%
+    Test Loss:  27.362    Test Acc.:  69.70%
+[Epoch 29, mb 100]    Avg.Loss = 44.206
+    Train Loss: 27.382    Train Acc.: 67.02%
+    Test Loss:  31.381    Test Acc.:  69.55%
+[Epoch 30, mb 100]    Avg.Loss = 48.842
+    Train Loss: 31.293    Train Acc.: 67.08%
+    Test Loss:  35.252    Test Acc.:  69.65%
+hidden units: 5, num_batch: 100, learning rate: 0.0010, momentum: 0.8
+Running time is 53.6832 s.
+
+[Epoch 1, mb 100]    Avg.Loss = 0.999
+    Train Loss: 0.831    Train Acc.: 52.79%
+    Test Loss:  0.892    Test Acc.:  54.95%
+[Epoch 2, mb 100]    Avg.Loss = 1.135
+    Train Loss: 0.940    Train Acc.: 56.85%
+    Test Loss:  1.001    Test Acc.:  59.75%
+[Epoch 3, mb 100]    Avg.Loss = 1.276
+    Train Loss: 1.046    Train Acc.: 60.00%
+    Test Loss:  1.109    Test Acc.:  63.55%
+[Epoch 4, mb 100]    Avg.Loss = 1.423
+    Train Loss: 1.151    Train Acc.: 62.33%
+    Test Loss:  1.221    Test Acc.:  65.50%
+[Epoch 5, mb 100]    Avg.Loss = 1.579
+    Train Loss: 1.258    Train Acc.: 63.51%
+    Test Loss:  1.338    Test Acc.:  66.85%
+[Epoch 6, mb 100]    Avg.Loss = 1.738
+    Train Loss: 1.365    Train Acc.: 63.85%
+    Test Loss:  1.460    Test Acc.:  67.20%
+[Epoch 7, mb 100]    Avg.Loss = 1.895
+    Train Loss: 1.466    Train Acc.: 63.86%
+    Test Loss:  1.582    Test Acc.:  66.70%
+[Epoch 8, mb 100]    Avg.Loss = 2.033
+    Train Loss: 1.547    Train Acc.: 63.65%
+    Test Loss:  1.681    Test Acc.:  66.60%
+[Epoch 9, mb 100]    Avg.Loss = 2.127
+    Train Loss: 1.573    Train Acc.: 63.45%
+    Test Loss:  1.732    Test Acc.:  66.65%
+[Epoch 10, mb 100]    Avg.Loss = 2.110
+    Train Loss: 1.497    Train Acc.: 63.15%
+    Test Loss:  1.690    Test Acc.:  66.50%
+[Epoch 11, mb 100]    Avg.Loss = 1.942
+    Train Loss: 1.262    Train Acc.: 63.40%
+    Test Loss:  1.513    Test Acc.:  66.80%
+[Epoch 12, mb 100]    Avg.Loss = 1.661
+    Train Loss: 0.843    Train Acc.: 63.39%
+    Test Loss:  1.220    Test Acc.:  66.85%
+[Epoch 13, mb 100]    Avg.Loss = 1.464
+    Train Loss: 0.304    Train Acc.: 63.57%
+    Test Loss:  0.945    Test Acc.:  66.75%
+[Epoch 14, mb 100]    Avg.Loss = 1.680
+    Train Loss: -0.145    Train Acc.: 63.94%
+    Test Loss:  0.926    Test Acc.:  67.05%
+[Epoch 15, mb 100]    Avg.Loss = 2.665
+    Train Loss: -0.211    Train Acc.: 64.12%
+    Test Loss:  1.423    Test Acc.:  67.30%
+[Epoch 16, mb 100]    Avg.Loss = 4.5857
+    Train Loss: 0.354    Train Acc.: 64.28%
+    Test Loss:  2.590    Test Acc.:  67.30%
+[Epoch 17, mb 100]    Avg.Loss = 7.4439
+    Train Loss: 1.651    Train Acc.: 64.67%
+    Test Loss:  4.480    Test Acc.:  67.60%
+[Epoch 18, mb 100]    Avg.Loss = 11.151
+    Train Loss: 3.677    Train Acc.: 64.96%
+    Test Loss:  7.032    Test Acc.:  68.25%
+[Epoch 19, mb 100]    Avg.Loss = 15.385
+    Train Loss: 6.328    Train Acc.: 65.16%
+    Test Loss:  10.082    Test Acc.:  68.95%
+[Epoch 20, mb 100]    Avg.Loss = 19.897
+    Train Loss: 9.394    Train Acc.: 65.41%
+    Test Loss:  13.420    Test Acc.:  69.20%
+[Epoch 21, mb 100]    Avg.Loss = 24.530
+    Train Loss: 12.690    Train Acc.: 65.70%
+    Test Loss:  16.881    Test Acc.:  69.45%
+[Epoch 22, mb 100]    Avg.Loss = 29.026
+    Train Loss: 16.041    Train Acc.: 65.81%
+    Test Loss:  20.289    Test Acc.:  69.55%
+[Epoch 23, mb 100]    Avg.Loss = 33.320
+    Train Loss: 19.309    Train Acc.: 66.03%
+    Test Loss:  23.557    Test Acc.:  69.30%
+[Epoch 24, mb 100]    Avg.Loss = 37.336
+    Train Loss: 22.420    Train Acc.: 66.19%
+    Test Loss:  26.616    Test Acc.:  69.40%
+[Epoch 25, mb 100]    Avg.Loss = 41.073
+    Train Loss: 25.339    Train Acc.: 66.46%
+    Test Loss:  29.467    Test Acc.:  69.45%
+[Epoch 26, mb 100]    Avg.Loss = 44.524
+    Train Loss: 28.069    Train Acc.: 66.57%
+    Test Loss:  32.122    Test Acc.:  69.60%
+[Epoch 27, mb 100]    Avg.Loss = 47.795
+    Train Loss: 30.629    Train Acc.: 66.63%
+    Test Loss:  34.622    Test Acc.:  69.50%
+[Epoch 28, mb 100]    Avg.Loss = 50.879
+    Train Loss: 33.060    Train Acc.: 66.76%
+    Test Loss:  36.990    Test Acc.:  69.40%
+[Epoch 29, mb 100]    Avg.Loss = 53.806
+    Train Loss: 35.386    Train Acc.: 66.92%
+    Test Loss:  39.248    Test Acc.:  69.40%
+[Epoch 30, mb 100]    Avg.Loss = 56.561
+    Train Loss: 37.603    Train Acc.: 67.03%
+    Test Loss:  41.402    Test Acc.:  69.85%
+hidden units: 10, num_batch: 100, learning rate: 0.0010, momentum: 0.8
+Running time is 66.9832 s.
+
+Total running time is 129.3275 s.
+
+
+[Epoch 1, mb 100]    Avg.Loss = 0.682
+    Train Loss: 0.711    Train Acc.: 52.21%
+    Test Loss:  0.677    Test Acc.:  55.15%
+...
+[Epoch 28, mb 100]    Avg.Loss = 0.554
+    Train Loss: 0.584    Train Acc.: 68.38%
+    Test Loss:  0.575    Test Acc.:  68.60%
+[Epoch 29, mb 100]    Avg.Loss = 0.553
+    Train Loss: 0.582    Train Acc.: 68.53%
+    Test Loss:  0.574    Test Acc.:  68.85%
+[Epoch 30, mb 100]    Avg.Loss = 0.552
+    Train Loss: 0.581    Train Acc.: 68.67%
+    Test Loss:  0.572    Test Acc.:  69.05%
+hidden units: 10, num_batch: 100, learning rate: 0.0010, momentum: 0.8
+Running time is 68.2701 s.
+
+[Epoch 1, mb 100]    Avg.Loss = 0.638
+    Train Loss: 0.680    Train Acc.: 56.89%
+    Test Loss:  0.652    Test Acc.:  62.25%
+....    
+[Epoch 28, mb 100]    Avg.Loss = 0.515
+    Train Loss: 0.551    Train Acc.: 71.53%
+    Test Loss:  0.547    Test Acc.:  72.65%
+[Epoch 29, mb 100]    Avg.Loss = 0.513
+    Train Loss: 0.548    Train Acc.: 71.77%
+    Test Loss:  0.545    Test Acc.:  72.75%
+[Epoch 30, mb 100]    Avg.Loss = 0.511
+    Train Loss: 0.546    Train Acc.: 71.84%
+    Test Loss:  0.543    Test Acc.:  72.65%
+hidden units: 50, num_batch: 100, learning rate: 0.0010, momentum: 0.8
+Running time is 215.7056 s.
