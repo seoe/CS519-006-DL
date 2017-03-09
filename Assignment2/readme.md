@@ -12,7 +12,7 @@ p(c_1|x)=\frac{1}{1+\exp(-f(x))}$, $p(c_2|x)=\frac{1}{1+\exp(f(x))}$
 
 **Please put the report(in pdf) and the source code into a same zip file, "firstname_lastname_hw2.zip". Submit this zip file on Canvas. You have to make sure your code could run and produce reasonable results!**
 
-1. Write a function that evaluates the trained network (5 points), as well as computes all the subgradients of W_1W1W1 and W_2W2W2 using backpropagation (5 points).
+1. Write a function that evaluates the trained network (5 points), as well as computes all the subgradients of W_1 and W_2 using backpropagation (5 points).
 
 1. Write a function that performs stochastic mini-batch gradient descent training (5 points). You may use the deterministic approach of permuting the sequence of the data. Use the momentum approach described in the course slides.
 
