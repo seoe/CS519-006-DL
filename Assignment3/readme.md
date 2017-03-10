@@ -1,11 +1,11 @@
 # Assignment #3: Keras CIFAR‐10 Image Classificaon
 - [Assignment Description](#assignment-description)
 - [Problems from keras version](#problems-from-keras-version)
-    - [Dimension ordering](#dimension-ordering)
-    - [Model save/load problem](#model-save-load-problem)
+    - [Dimension ordering problem](#dimension-ordering-problem)
+    - [Model save/load problem](#model-saveload-problem)
     - [Layer pop problem](#layer-pop-problem)
-    - [layer name in model.add](#layer-name-in-model-add)
-    - [Acc result display Problem](#acc-result-display)
+    - [layer name in model.add](#layer-name-in-modeladd)
+    - [Acc result display Problem](#acc-result-display-problem)
 
 
 
@@ -61,6 +61,9 @@ For each of the settings (1) - (4), please submit a PDF report your training los
 ### Tips for popping a layer:
 In order to pop a layer, you can easily call model.layers.pop(). Layers is a Python list, which supports stack functions such as push and pop. However, a KNOWN problem is that if you don't save the popped layer, Python garbage collection will claim some memory which causes an error, so for the moment before we know what is the problem, let's call layer1 = model.layers.pop() instead of just calling model.layers.pop(), then it will work.
 
+[***Back*** to TOP](#assignment-3-keras-cifar10-image-classificaon)
+
+---
 
 ## Problems from keras version  
 
@@ -84,6 +87,10 @@ So, for the keras version 1.2.2, I need to switch `dim_ordering` according to th
 So, the **`reason`** is, keras in TitanX is too recent (version `1.2.2`) for Assignment's code, which is only compatible to older version(like `0.3.2` in pelican), and the output dimension of AveragePooling2D function is different between the two versions.
 
 
+[***Back*** to TOP](#assignment-3-keras-cifar10-image-classificaon)
+
+---
+
 ### Model save/load problem
 
 There are two ways to save trained model.  
@@ -103,6 +110,11 @@ model.save('m.h5')
 load_model('m.h5')
 ```
 
+
+[***Back*** to TOP](#assignment-3-keras-cifar10-image-classificaon)
+
+---
+
 ### Layer pop problem
 
 `l0 = model.layers.pop()` only pop the layer node, not the connection and output of model.   
@@ -115,12 +127,22 @@ model.layers[-1].outbound_nodes = []
 ```
 
 
+[***Back*** to TOP](#assignment-3-keras-cifar10-image-classificaon)
+
+---
+
+
 ### Layer name in model.add
 
 check layer information with `model.summary()`  
 In keras 1.2.2, if you load a model and add some layer, you need to give it a **new** name to avoid duplicate name because the loaded one may have been named as dense_1, and once you use .add(dense(512)), it will give 'dense_1' again. The right way should be `.add(dense(512,name="dense_new"))`
 
-### Acc result display
+
+[***Back*** to TOP](#assignment-3-keras-cifar10-image-classificaon)
+
+---
+
+### Acc result display problem
 
 keras 1.2.2 has another problem:
 ```
@@ -128,3 +150,8 @@ UserWarning: The "show_accuracy" argument is deprecated, instead you should pass
 `model.compile(optimizer, loss, metrics=["accuracy"])`
 ```
 or the result will only has `loss` rather than `acc` after fitting. So I add the `metrics=["accuracy"]` as the last argument of model.compile.
+
+
+[***Back*** to TOP](#assignment-3-keras-cifar10-image-classificaon)
+
+---
