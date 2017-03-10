@@ -1,5 +1,9 @@
 # Assignment #3: Keras CIFAR‐10 Image Classificaon
+- [Assignment Description](#assignment-description)
+- [Problems from keras version](#problems-from-keras-version)
 
+
+## Assignment Description
 **Due** Mar 10 by 11:59pm **Points** 40 **Submitting** a file upload **File Types** zip
 
 For this assignment, please either install Theano and Keras either on your own computer/server, or use the pelican server
@@ -46,3 +50,64 @@ For each of the settings (1) - (4), please submit a PDF report your training los
 
 ### Tips for popping a layer:
 In order to pop a layer, you can easily call model.layers.pop(). Layers is a Python list, which supports stack functions such as push and pop. However, a KNOWN problem is that if you don't save the popped layer, Python garbage collection will claim some memory which causes an error, so for the moment before we know what is the problem, let's call layer1 = model.layers.pop() instead of just calling model.layers.pop(), then it will work.
+
+
+## Problems from keras version  
+
+I believe keras has change the order of arguments in 4D shape from (samples, channels, rows, cols)/v-0.3.2 to (samples, rows, cols, channels)/v-1.2.2 if `dim_ordering='tf'`(in `~/.keras/keras.json/`). In older version, they are compatible with 'tf'.
+
+So, for the keras version 1.2.2, I need to switch `dim_ordering` according to the backend.
+
+|Layer|Group server|Pelican server|
+|:-:|:-:|:-:|
+|keras.\_\_version\_\_|1.2.2|0.3.2|
+|MaxPooling2D Input shape('th' order)|(samples, **channels**, rows, cols)|(samples, channels, rows, cols)|
+|MaxPooling2D Input shape('tf' order)|(samples, rows, cols, **channels**)|(samples, channels, rows, cols)|
+
+So, the **`reason`** is, keras in TitanX is too recent (version `1.2.2`) for Assignment's code, which is only compatible to older version(like `0.3.2` in pelican), and the output dimension of AveragePooling2D function is different between the two versions.
+
+
+## Model save/load problem
+
+There are two ways to save trained model.  
+One is to save/load **architecture** of model(**JSON**) and **weights**(**HDF5**) seperaterly.  
+```python
+model.to_json()
+model.save_weights('m.h5')
+...
+model.load_weights('m.h5')
+```
+The other is to seve/load the whole model using `load_model`:
+```python
+from keras.models import load_model
+...
+model.save('m.h5')
+...
+load_model('m.h5')
+```
+
+## Layer pop problem
+
+`l0 = model.layers.pop()` only pop the layer node, not the connection and output of model.   
+So, we need to do like this:
+```
+model.layers.pop()
+model.layers.pop()
+model.outputs = [model.layers[-1].output]
+model.layers[-1].outbound_nodes = []
+```
+
+
+## layer name in model.add
+
+check layer information with `model.summary()`  
+In keras 1.2.2, if you load a model and add some layer, you need to give it a **new** name to avoid duplicate name because the loaded one may have been named as dense_1, and once you use .add(dense(512)), it will give 'dense_1' again. The right way should be `.add(dense(512,name="dense_new"))`
+
+## result of fit  
+
+keras 1.2.2 has another problem:
+```
+UserWarning: The "show_accuracy" argument is deprecated, instead you should pass the "accuracy" metric to the model at compile time:
+`model.compile(optimizer, loss, metrics=["accuracy"])`
+```
+or the result will only has `loss` rather than `acc` after fitting. So I add the `metrics=["accuracy"]` as the last argument of model.compile.
