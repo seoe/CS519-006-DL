@@ -1,7 +1,17 @@
 # Assignment #3: Keras CIFAR‐10 Image Classificaon
 - [Assignment Description](#assignment-description)
 - [Problems from keras version](#problems-from-keras-version)
+    - [Dimension ordering](#dimension-ordering)
+    - [Model save/load problem](#model-save-load-problem)
+    - [Layer pop problem](#layer-pop-problem)
+    - [layer name in model.add](#layer-name-in-model-add)
+    - [Acc result display Problem](#acc-result-display)
 
+
+
+Model save/load problem
+Layer pop problem
+layer name in model.add
 
 ## Assignment Description
 **Due** Mar 10 by 11:59pm **Points** 40 **Submitting** a file upload **File Types** zip
@@ -54,6 +64,13 @@ In order to pop a layer, you can easily call model.layers.pop(). Layers is a Pyt
 
 ## Problems from keras version  
 
+### Dimension ordering problem
+From official documentation, there are:
+> MaxPooling2D  Input shape  
+> 4D tensor with shape: (samples, channels, rows, cols) if dim_ordering='th'  
+> or   
+> 4D tensor with shape: (samples, rows, cols, channels) if dim_ordering='tf'.
+
 I believe keras has change the order of arguments in 4D shape from (samples, channels, rows, cols)/v-0.3.2 to (samples, rows, cols, channels)/v-1.2.2 if `dim_ordering='tf'`(in `~/.keras/keras.json/`). In older version, they are compatible with 'tf'.
 
 So, for the keras version 1.2.2, I need to switch `dim_ordering` according to the backend.
@@ -67,7 +84,7 @@ So, for the keras version 1.2.2, I need to switch `dim_ordering` according to th
 So, the **`reason`** is, keras in TitanX is too recent (version `1.2.2`) for Assignment's code, which is only compatible to older version(like `0.3.2` in pelican), and the output dimension of AveragePooling2D function is different between the two versions.
 
 
-## Model save/load problem
+### Model save/load problem
 
 There are two ways to save trained model.  
 One is to save/load **architecture** of model(**JSON**) and **weights**(**HDF5**) seperaterly.  
@@ -86,7 +103,7 @@ model.save('m.h5')
 load_model('m.h5')
 ```
 
-## Layer pop problem
+### Layer pop problem
 
 `l0 = model.layers.pop()` only pop the layer node, not the connection and output of model.   
 So, we need to do like this:
@@ -98,12 +115,12 @@ model.layers[-1].outbound_nodes = []
 ```
 
 
-## layer name in model.add
+### Layer name in model.add
 
 check layer information with `model.summary()`  
 In keras 1.2.2, if you load a model and add some layer, you need to give it a **new** name to avoid duplicate name because the loaded one may have been named as dense_1, and once you use .add(dense(512)), it will give 'dense_1' again. The right way should be `.add(dense(512,name="dense_new"))`
 
-## result of fit  
+### Acc result display
 
 keras 1.2.2 has another problem:
 ```
