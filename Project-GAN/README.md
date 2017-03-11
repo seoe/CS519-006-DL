@@ -142,7 +142,7 @@ Some results from OSU landscapes are generated and saved to my own computer.
 |:--:|:--:|:--:|
 |![](./images/OSU-kec-sty.jpg 'OSU-kec-sty')|![](./images/OSU-kec-real.jpg 'OSU-kec-real')|![](./images/OSU-kec-output-g0-80.jpg 'OSU-kec-output-g0-80')|
 |Content|Style|Result|
-|![](./images/OSU-pole--sty1.jpg 'OSU-pole-sty1')|![](./images/OSU-pole-real.jpg 'OSU-pole-real')|![](./images/OSU-pole-sty1-output-g0-80.jpg 'OSU-pole-sty1-output-g0-80')|
+|![](./images/OSU-pole-sty1.jpg 'OSU-pole-sty1')|![](./images/OSU-pole-real.jpg 'OSU-pole-real')|![](./images/OSU-pole-sty1-output-g0-80.jpg 'OSU-pole-sty1-output-g0-80')|
 |Content|Style|Result|
 |![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
 |Content|Style|Result|
