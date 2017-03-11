@@ -58,7 +58,7 @@ With MLP:
 python main.py --mlp_G --ngf 512
 ```
 After run `python main.py.....`, there is an error `ImportError: No module named lmdb`. So I install lmdb with `pip install lmdb`.  
-Then, run the main, turns out that LSUN dataset(bedroom) not found. After research, pytorch offer download of mnist, not for lsun, which make users do it manually. So I find a [repo](https://github.com/fyu/lsun) for downloading LSUN-bedroom data. **rember**, do not use `wget` on encrypted url, I just need to open 'raw' of a py code then use `wget` to download a file seperately.  
+Then, run the main, turns out that LSUN dataset(bedroom) not found. After research, pytorch offer download of mnist, not for lsun, which make users do it manually. So I find a [repo](https://github.com/fyu/lsun) for downloading LSUN-bedroom data. **remember**, do not use `wget` on encrypted url, I just need to open 'raw' of a py code then use `wget` to download a file seperately.  
 So I run `python download.py -c bedroom` to start downloading the two 45GB zip files, which takes 1.5 hours. But it failed and left about a hafl undownloaded. With that uncompleted zip I cannot unzip it.
 
 
@@ -75,7 +75,8 @@ python main.py --dataset lsun --dataroot './' --cuda
 As is mentioned in the repo's note, 
 > The first time running on the LSUN dataset it can take a long time (up to an hour) to create the dataloader. After the first run a small cache file will be created and the process should take a matter of seconds. The cache is a list of indices in the lmdb database (of LSUN)
 
-It really took a while to create the dataloader.
+It really took a while to create the dataloader.  
+
 [***Back*** to subcontents ***GAN***](#gan)  
 
 ### StyleSynthesis-machrisaa-tensorflow+VGG19
@@ -136,6 +137,16 @@ Then I have to switch to steed instead.
 After some environment configuration, I upgrade the numpy then I can import tensorflow successfully in steed.
 
 Some results from OSU landscapes are generated and saved to my own computer.
+
+|Content|Style|Result|
+|:--:|:--:|:--:|
+|![](/images/OSU-kec-sty.jpg 'OSU-kec-sty')|![](/images/OSU-kec-real.jpg 'OSU-kec-real')|![](/images/OSU-kec-output-g0-80.jpg 'OSU-kec-output-g0-80')|
+|Content|Style|Result|
+|![](/images/OSU-pole--sty1.jpg 'OSU-pole-sty1')|![](/images/OSU-pole-real.jpg 'OSU-pole-real')|![](/images/OSU-pole-sty1-output-g0-80.jpg 'OSU-pole-sty1-output-g0-80')|
+|Content|Style|Result|
+|![](/images/starry_night_paint.jpg 'starry_night_paint')|![](/images/starry_night_real.jpg 'starry_night_real')|![](/images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
+|Content|Style|Result|
+
 
 [***Back*** to subcontents ***GAN***](#gan)  
 [***Back to CONTENTS***](#contents)  
