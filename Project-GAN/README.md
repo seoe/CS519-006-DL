@@ -32,7 +32,7 @@ then updated to `liukaib@lifgroup:/home/liukaib/GAN/Info-GAN-burness-tensorflow`
 #### 03/01/2017 Wed
 implement DCGAN with celebA face dataset, from [repo](https://github.com/carpedm20/DCGAN-tensorflow).
 dir is `liukaib@lifgroup:/home/liukaib/GAN/DCGAN-tensorflow`, then updated to `liukaib@lifgroup:/home/liukaib/GAN/DCGAN-carpedm20-tensorflow` on 03/11/2017 Sat.
-total train is 24 epoch/7.7h. 
+total train is 24 epoch/7.7h.
 
 After group meeting, I tried mnist dataset and got some result with can be used as gif to illustrate.
 
@@ -44,11 +44,11 @@ workon WGAN on `lifgroup` at night
 install [PyTorch](http://pytorch.org/)  
 with python-2.7+CUDA-8.0
 ```zsh
-pip install https://s3.amazonaws.com/pytorch/whl/cu80/torch-0.1.10.post2-cp27-none-linux_x86_64.whl 
+pip install https://s3.amazonaws.com/pytorch/whl/cu80/torch-0.1.10.post2-cp27-none-linux_x86_64.whl
 pip install torchvision
 ```
 clone [WGAN repo](https://github.com/martinarjovsky/WassersteinGAN) into `lifgroup:~/GAN` (moved to `/media/HDD/LargeDisk/liukaib/WassersteinGAN` on 03/10/2017)  
-venv is `envDL` 
+venv is `envDL`
 With DCGAN:
 ```zsh
 python main.py --dataset lsun --dataroot [lsun-train-folder] --cuda
@@ -72,7 +72,7 @@ Since the `lsun-train-folder` is in `./`, the same path as `main.py`, so the run
 ```bash
 python main.py --dataset lsun --dataroot './' --cuda
 ```
-As is mentioned in the repo's note, 
+As is mentioned in the repo's note,
 > The first time running on the LSUN dataset it can take a long time (up to an hour) to create the dataloader. After the first run a small cache file will be created and the process should take a matter of seconds. The cache is a list of indices in the lmdb database (of LSUN)
 
 It really took a while to create the dataloader.  
@@ -140,11 +140,11 @@ Some results from OSU landscapes are generated and saved to my own computer.
 
 |Content|Style|Result|
 |:--:|:--:|:--:|
-|![](/images/OSU-kec-sty.jpg 'OSU-kec-sty')|![](/images/OSU-kec-real.jpg 'OSU-kec-real')|![](/images/OSU-kec-output-g0-80.jpg 'OSU-kec-output-g0-80')|
+|![](./images/OSU-kec-sty.jpg 'OSU-kec-sty')|![](./images/OSU-kec-real.jpg 'OSU-kec-real')|![](./images/OSU-kec-output-g0-80.jpg 'OSU-kec-output-g0-80')|
 |Content|Style|Result|
-|![](/images/OSU-pole--sty1.jpg 'OSU-pole-sty1')|![](/images/OSU-pole-real.jpg 'OSU-pole-real')|![](/images/OSU-pole-sty1-output-g0-80.jpg 'OSU-pole-sty1-output-g0-80')|
+|![](./images/OSU-pole--sty1.jpg 'OSU-pole-sty1')|![](./images/OSU-pole-real.jpg 'OSU-pole-real')|![](./images/OSU-pole-sty1-output-g0-80.jpg 'OSU-pole-sty1-output-g0-80')|
 |Content|Style|Result|
-|![](/images/starry_night_paint.jpg 'starry_night_paint')|![](/images/starry_night_real.jpg 'starry_night_real')|![](/images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
+|![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
 |Content|Style|Result|
 
 
