@@ -6,7 +6,7 @@
 |[DCGAN-carpedm20-tf](#dcgan-carpedm20-tensorflow) / [repo](https://github.com/carpedm20/DCGAN-tensorflow)|DCGAN|envDL|mnist+celebA|:ok_hand:|
 |DCGAN-soumith-torch-lsun+ImageNet / [repo](https://github.com/soumith/dcgan.torch)|DCGAN|||:sleepy:|
 |[Info-GAN-burness-tf](#info-gan-burness-tensorflow) / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/Info-GAN0)|Info-GAN|envDL|mnist|:ok_hand:|
-|[WassersteinGAN](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:sleepy:|
+|[WassersteinGAN](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:expressionless:|
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|keras_theano_py2|random img|:ok_hand:|
 
 ### Start-GAN
@@ -34,7 +34,7 @@ implement DCGAN with celebA face dataset, from [repo](https://github.com/carpedm
 dir is `liukaib@lifgroup:/home/liukaib/GAN/DCGAN-tensorflow`, then updated to `liukaib@lifgroup:/home/liukaib/GAN/DCGAN-carpedm20-tensorflow` on 03/11/2017 Sat.
 total train is 24 epoch/7.7h.
 
-After group meeting, I tried mnist dataset and got some result with can be used as gif to illustrate.
+After group meeting, I tried mnist dataset and got some results which can be used as gif to illustrate.
 
 [***Back*** to subcontents ***GAN***](#gan)  
 
