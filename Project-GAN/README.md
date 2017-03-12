@@ -143,17 +143,23 @@ Some results from OSU landscapes are generated and saved to my own computer.
 |Content|Style|Result|
 |:--:|:--:|:--:|
 |![](./images/OSU-buil-real.jpg 'OSU-buil-real')|![](./images/OSU-pole-sty2.jpg 'OSU-pole-sty2')|![](./images/output-OSU_built_to_pole-sty2-g1-50.jpg 'output-OSU_built_to_pole-sty2-g1-50')|
+|Content|+[Style]|=Result|
 |![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/OSU-buil-sty3.jpg 'OSU-buil-sty3')|![](./images/output-OSU-Valley_to_OSU-buil-sty3-g1-15.jpg 'output-OSU-Valley_to_OSU-buil-sty3-g1-15.jpg')|
+|Content|+[Style]|=Result|
 |![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/output-OSU-Valley_to_starry_night_paint-g1-25.jpg 'output-OSU-Valley_to_starry_night_paint-g1-25')|
+|Content|+[Style]|=Result|
 |![](./images/CraterLake-real.jpg 'CraterLake-real')|![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/output-CraterLake_to_starry_night_paint-g1-50.jpg 'output-CraterLake_to_starry_night_paint-g1-50')|
+|Content|+[Style]|=Result|
 |![](./images/beaverlogo.jpg 'beaverlogo')|![](./images/OSU-kec-sty.jpg 'OSU-kec-sty')|![](./images/output-beaverlogo_to_OSU-kec-sty-g2-50.jpg 'output-beaverlogo_to_OSU-kec-sty-g2-50')|
+|Content|+[Style]|=Result|
 |![](./images/Mark-real.jpg 'Mark-real')|![](./images/cat-water-colour.jpg 'cat-water-colour')|![](./images/output-Mark-real_to_cat-water-colour-g0-45.jpg 'output-Mark-real_to_cat-water-colour-g0-45')|
+|Content|+[Style]|=Result|
 |![](./images/OSU-kec-sty.jpg 'OSU-kec-sty')|![](./images/OSU-kec-real.jpg 'OSU-kec-real')|![](./images/OSU-kec-output-g0-80.jpg 'OSU-kec-output-g0-80')|
-|Content|Style|Result|
+|Content|+[Style]|=Result|
 |![](./images/OSU-pole-sty1.jpg 'OSU-pole-sty1')|![](./images/OSU-pole-real.jpg 'OSU-pole-real')|![](./images/OSU-pole-sty1-output-g0-80.jpg 'OSU-pole-sty1-output-g0-80')|
-|Content|Style|Result|
+|Content|+[Style]|=Result|
 |![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
-|Content|Style|Result|
+|Content|+[Style]|=Result|
 
 This project can be executed on TitanX server under my `envDL` virtualenv other than `keras_theano_py2`.
 
