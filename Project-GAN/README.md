@@ -77,6 +77,8 @@ As is mentioned in the repo's note,
 
 It really took a while to create the dataloader.  
 
+After cache created, both TitanX GPUs in group server got fully occupied again. So my plan has to stop for the moment.
+
 [***Back*** to subcontents ***GAN***](#gan)  
 
 ### StyleSynthesis-machrisaa-tensorflow+VGG19
@@ -148,5 +150,4 @@ Some results from OSU landscapes are generated and saved to my own computer.
 |Content|Style|Result|
 
 
-[***Back*** to subcontents ***GAN***](#gan)  
-[***Back to CONTENTS***](#contents)  
+[***Back*** to subcontents ***GAN***](#gan) 
