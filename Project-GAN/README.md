@@ -149,17 +149,31 @@ Then I have to switch to **steed** instead.
 
 After some environment configuration, I upgrade the `numpy` then I can import tensorflow successfully on **steed**.
 
-Some results from OSU landscapes are generated and saved to my own computer. Here are part of them.
+Some results from OSU landscapes are generated with famous painting styles and saved to my own computer. Here are part of them.
+
+The Starry Night, 1889 by Vincent van Gogh  
+Les Demoiselles d'Avignon, 1907, Pablo Picasso  
+The Scream, 1893 by Edvard Munch  
+Mona Lisa, 1503 by Leonardo da Vinci  
+
 
 |Content|Style|Result|
 |:--:|:--:|:--:|
 |![](./images/OSU-buil-real.jpg 'OSU-buil-real')|![](./images/OSU-pole-sty2.jpg 'OSU-pole-sty2')|![](./images/output-OSU_built_to_pole-sty2-g1-50.jpg 'output-OSU_built_to_pole-sty2-g1-50')|
 |Content|+[Style]|=Result|
-|![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/OSU-buil-sty3.jpg 'OSU-buil-sty3')|![](./images/output-OSU-Valley_to_OSU-buil-sty3-g1-15.jpg 'output-OSU-Valley_to_OSU-buil-sty3-g1-15.jpg')|
+|![](./images/OSU-buil-real.jpg 'OSU-buil-real')|![](./images/Les_Demoiselles_dAvignon.jpg 'Les Demoiselles d'Avignon, 1907, Pablo Picasso')|![](./images/output-OSU-buil-real_to_Les_Demoiselles_dAvignon-g1-55.jpg 'output-OSU-buil-real_to_Les_Demoiselles_dAvignon-g1-55')|
+|Content|+[Style]|=Result|
+|![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/Les_Demoiselles_dAvignon.jpg 'Les Demoiselles d'Avignon, 1907, Pablo Picasso')|![](./images/output-OSU-Valley_to_Les_Demoiselles_dAvignon-g1-50.jpg 'output-OSU-Valley_to_Les_Demoiselles_dAvignon-g1-50')|
+|Content|+[Style]|=Result|
+|![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/OSU-buil-sty3.jpg 'OSU-buil-sty3')|![](./images/output-OSU-Valley_to_OSU-buil-sty3-g1-15.jpg 'output-OSU-Valley_to_OSU-buil-sty3-g1-15')|
 |Content|+[Style]|=Result|
 |![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/output-OSU-Valley_to_starry_night_paint-g1-25.jpg 'output-OSU-Valley_to_starry_night_paint-g1-25')|
 |Content|+[Style]|=Result|
 |![](./images/CraterLake-real.jpg 'CraterLake-real')|![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/output-CraterLake_to_starry_night_paint-g1-50.jpg 'output-CraterLake_to_starry_night_paint-g1-50')|
+|Content|+[Style]|=Result|
+|![](./images/cat_h.jpg 'cat')|![](./images/monnalisa.jpg 'Mona Lisa, 1503 by Leonardo da Vinci')|![](./images/output-cat_to_monnalisa-g1-55.jpg 'output-cat_to_monnalisa-g1-55')|
+|Content|+[Style]|=Result|
+|![](./images/husky_real.jpg 'husky_real')|![](./images/the-scream.jpg 'The Scream, 1893 by Edvard Munch')|![](./images/output-husky_real_to_the-scream-g1-50.jpg 'output-husky_real_to_the-scream-g1-50')|
 |Content|+[Style]|=Result|
 |![](./images/beaverlogo.jpg 'beaverlogo')|![](./images/OSU-kec-sty.jpg 'OSU-kec-sty')|![](./images/output-beaverlogo_to_OSU-kec-sty-g2-50.jpg 'output-beaverlogo_to_OSU-kec-sty-g2-50')|
 |Content|+[Style]|=Result|
