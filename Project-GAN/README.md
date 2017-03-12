@@ -86,7 +86,7 @@ After cache created, both TitanX GPUs in group server got fully occupied again. 
 #### 03/10/2017 Fri
 
 clone the [repo](https://github.com/machrisaa/stylenet), run and fail.   
-Then I modified the import function/files, which is not maitained for one year. Moreover, the stylesyn project relies on vgg19 project. So I download the vgg19.py file into the folder as import.
+Then I modified the import function/files, which is not maitained for one year. Moreover, the stylesyn project relies on vgg19 project. So I download the [vgg19.py](https://github.com/machrisaa/tensorflow-vgg/blob/master/vgg19.py) file into the folder to be imported.
 
 in `stylenet_patch.py`:
 ```python
@@ -100,13 +100,24 @@ from tensoflow_vgg import vgg19
 -->
 import vgg19
 ```
-Then I find I need `vgg19.npy` downloaded into the same path. So a 574.7 MB file is downloaded from cloud disk and copied to TitanX server.
+Then I find I need a `vgg19.npy` downloaded into the same path according to the same author's another [repo](https://github.com/machrisaa/tensorflow-vgg). So a 574.7 MB file is downloaded from [cloud disk](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs) into my local laptop and copied to **TitanX** server.
 
-Since TitanX is occupied by Jialin and Lawrance fully. I turned to pelican server. However, `.meta` files are generated frequently, each of which has the size 500MB~2GB, making the server stopped me from continuing.    
-To disable the creation of the `.meta` file, I need to add `write_meta_graph=False`, in line 237 in `stylenet_patch.py`,Like this:  
+Since **TitanX** is occupied by Jialin and Lawrance fully, I turned to **pelican** server.  
+
+However, `.meta` files are generated frequently, each of which has the size **500MB~2GB**, making the server stop me from continuing.    
+To disable the creation of the `.meta` file, I need to add `write_meta_graph=False`, into line 237 in `stylenet_patch.py`, like this:  
 ```python
 saved_path = saver.save(sess, "./train/saves-" + get_filename(content_file), global_step=global_step, write_meta_graph=False)
 ```
+So everything is OK for running.  
+Basic usage is, in main of `stylenet_patch.py`, set  
+```
+stylenet_patch.render_gen( <content image path> , <style image path>, height=<output height>)
+```
+and run `python stylenet_patch.py`.
+
+Alternatively, you can go as I did. I wrote another `run_main.py` to import `stylenet_patch` and set image paths to run the `render_gen()` function from `stylenet_patch.py`.
+
 Husky (without region) after running,
 ```zsh
 Step 199: cost:0.0030512088     (27.3 sec)       content:0.00000, style_3:0.00089, style_4:0.00216, gram:0.00000, diff_cost_out:0.00000
@@ -133,12 +144,12 @@ img saved:  ./train/output-g2-200.jpg
 ----------- 2 generation finished in 51 sec -----------
 ```
 Then I generate some oil painting style pics of natural OSU landscapes with the app `prisma` and upload them to the server.  
-But the pelican is also fully occupied by a guy alizades.  
-Then I have to switch to steed instead.
+But the **pelican** is also fully occupied by a guy named alizades.  
+Then I have to switch to **steed** instead.
 
-After some environment configuration, I upgrade the numpy then I can import tensorflow successfully on steed.
+After some environment configuration, I upgrade the `numpy` then I can import tensorflow successfully on **steed**.
 
-Some results from OSU landscapes are generated and saved to my own computer.
+Some results from OSU landscapes are generated and saved to my own computer. Here are part of them.
 
 |Content|Style|Result|
 |:--:|:--:|:--:|
@@ -159,6 +170,6 @@ Some results from OSU landscapes are generated and saved to my own computer.
 |![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
 |Content|+[Style]|=Result|
 
-This project can be executed on TitanX server under my `envDL` virtualenv other than `keras_theano_py2`.
+This project can be executed on **TitanX** server under my `envDL` virtualenv other than `keras_theano_py2`.
 
 [***Back*** to subcontents ***GAN***](#gan)
