@@ -7,7 +7,7 @@
 |DCGAN-soumith-torch-lsun+ImageNet / [repo](https://github.com/soumith/dcgan.torch)|DCGAN|||:sleepy:|
 |[Info-GAN-burness-tf](#info-gan-burness-tensorflow) / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/Info-GAN0)|Info-GAN|envDL|mnist|:ok_hand:|
 |[WassersteinGAN](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:expressionless:|
-|[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|keras_theano_py2|random img|:ok_hand:|
+|[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|
 
 ### Start-GAN
 #### 2017/02/14 Tue midnight  
@@ -136,7 +136,7 @@ Then I generate some oil painting style pics of natural OSU landscapes with the 
 But the pelican is also fully occupied by a guy alizades.  
 Then I have to switch to steed instead.
 
-After some environment configuration, I upgrade the numpy then I can import tensorflow successfully in steed.
+After some environment configuration, I upgrade the numpy then I can import tensorflow successfully on steed.
 
 Some results from OSU landscapes are generated and saved to my own computer.
 
@@ -149,5 +149,6 @@ Some results from OSU landscapes are generated and saved to my own computer.
 |![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
 |Content|Style|Result|
 
+This project can be executed on TitanX server under my `envDL` virtualenv other than `keras_theano_py2`.
 
-[***Back*** to subcontents ***GAN***](#gan) 
+[***Back*** to subcontents ***GAN***](#gan)
