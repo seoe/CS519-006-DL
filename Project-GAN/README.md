@@ -6,7 +6,7 @@
 |[DCGAN-carpedm20-tf](#dcgan-carpedm20-tensorflow) / [repo](https://github.com/carpedm20/DCGAN-tensorflow)|DCGAN|envDL|mnist+celebA|:ok_hand:|
 |DCGAN-soumith-torch-lsun+ImageNet / [repo](https://github.com/soumith/dcgan.torch)|DCGAN|||:sleepy:|
 |[Info-GAN-burness-tf](#info-gan-burness-tensorflow) / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/Info-GAN0)|Info-GAN|envDL|mnist|:ok_hand:|
-|[WassersteinGAN](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:expressionless:|
+|[WassersteinGAN](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:ok_hand:|
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|
 
 ### Start-GAN
