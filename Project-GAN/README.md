@@ -48,23 +48,25 @@ pip install https://s3.amazonaws.com/pytorch/whl/cu80/torch-0.1.10.post2-cp27-no
 pip install torchvision
 ```
 clone [WGAN repo](https://github.com/martinarjovsky/WassersteinGAN) into `lifgroup:~/GAN` (moved to `/media/HDD/LargeDisk/liukaib/WassersteinGAN` on 03/10/2017)  
-venv is `envDL`
-With DCGAN:
+venv is `envDL`  
+execute command is not friendly given (fixed on [03/10/2017 Fri](#03102017-fri)'s log):
 ```zsh
+# With DCGAN
 python main.py --dataset lsun --dataroot [lsun-train-folder] --cuda
-```
-With MLP:
-```zsh
+
+
+# With MLP
 python main.py --mlp_G --ngf 512
 ```
+
 After run `python main.py.....`, there is an error `ImportError: No module named lmdb`. So I install lmdb with `pip install lmdb`.  
-Then, run the main, turns out that LSUN dataset(bedroom) not found. After research, pytorch offer download of mnist, not for lsun, which make users do it manually. So I find a [repo](https://github.com/fyu/lsun) for downloading LSUN-bedroom data. **remember**, do not use `wget` on encrypted url, I just need to open 'raw' of a py code then use `wget` to download a file seperately.  
-So I run `python download.py -c bedroom` to start downloading the two 45GB zip files, which takes 1.5 hours. But it failed and left about a hafl undownloaded. With that uncompleted zip I cannot unzip it.
+Then, run the main, turns out that LSUN dataset(bedroom) not found. After research, pytorch offers downloading command for mnist, not for lsun, which make users have do it manually. So I find a [repo](https://github.com/fyu/lsun) for downloading LSUN-bedroom data. **remember**, do not use `wget` on git files which are in encrypted url, I just need to open 'raw' of a `.py` code then use `wget` to download a file separately.  
+So I run `python download.py -c bedroom` to start downloading the two 45GB zip files, which takes 1.5 hours. But it failed and left about a half un-downloaded. With that uncompleted zip I cannot unzip it.
 
 
 #### 03/10/2017 Fri
 
-After several trial of downloading with ssh and tmux, I turned to the desktop and login my accout directly to run the download code. Finally it works. And I can unzip them successfully.
+After several trial of downloading with ssh and tmux, I turned to the desktop and login my accout directly to run the download code. Finally it works after about 2 hours. And I can unzip them successfully.
 
 #### 03/11/2017 Sat
 In the morning, I put both unzipped LSUN data folder (`bedroom_train_lmdb`/45GB->54GB,`bedroom_val_lmdb`/4MB->6MB) into `/WassersteinGAN`.   
@@ -78,6 +80,35 @@ As is mentioned in the repo's note,
 It really took a while to create the dataloader.  
 
 After cache created, both TitanX GPUs in group server got fully occupied again. So my plan has to stop for the moment.
+
+After waiting from noon to dusk, I can execute my code after the termination of Jialin's project at about 18:00.
+
+
+#### 03/13/2017 Mon  
+After 51 hours' running, the program for DCGAN got end.
+```bash
+[24/25][47380/47392][227859] Loss_D: -0.178149 Loss_G: 0.003281 Loss_D_real: 0.020692 Loss_D_fake 0.198841
+[24/25][47385/47392][227860] Loss_D: -0.160666 Loss_G: 0.049911 Loss_D_real: -0.213569 Loss_D_fake -0.052902
+[24/25][47390/47392][227861] Loss_D: -0.204119 Loss_G: 0.022151 Loss_D_real: -0.128741 Loss_D_fake 0.075378
+[24/25][47392/47392][227862] Loss_D: -0.118183 Loss_G: 0.026365 Loss_D_real: -0.016479 Loss_D_fake 0.101703
+```
+If I want to use MLP:
+```bash
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --mlp_G --ngf 512
+```
+If I want to to continue training:
+```bash
+# for DCGAN
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --netG './samples/netG_epoch_24.pth' --netD './samples/netD_epoch_24.pth'
+
+# for MLP
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --netG './samples/netG_epoch_24.pth' --netD './samples/netD_epoch_24.pth' --mlp_G --ngf 512
+```
+**Remember**, checkpoint of DCGAN cannot be loaded to a continued MLP execution, or the other way round, i.e. DCGAN mode can only load DCGAN checkpoint `.pth`, and MLP mode can only load MLP checkpoint `.pth`,
+
+At night, I add a function to save 4 types of loss into `.csv` so that I can plot some curves later.  
+Then I start 3 round of training simultaneously on DCGAN-cont.+loss, DCGAN+loss, and MLP+loss.
+
 
 [***Back*** to subcontents ***GAN***](#gan)  
 
