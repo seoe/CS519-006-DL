@@ -85,7 +85,7 @@ After waiting from noon to dusk, I can execute my code after the termination of 
 
 
 #### 03/13/2017 Mon  
-After 51 hours' running, the program for DCGAN got end.
+After 51 hours' running, the program for DCGAN got end. Runtime is 2h/epoch.
 ```bash
 [24/25][47380/47392][227859] Loss_D: -0.178149 Loss_G: 0.003281 Loss_D_real: 0.020692 Loss_D_fake 0.198841
 [24/25][47385/47392][227860] Loss_D: -0.160666 Loss_G: 0.049911 Loss_D_real: -0.213569 Loss_D_fake -0.052902
@@ -109,6 +109,8 @@ CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --ne
 At night, I add a function to save 4 types of loss into `.csv` so that I can plot some curves later.  
 Then I start 3 round of training simultaneously on DCGAN-cont.+loss, DCGAN+loss, and MLP+loss.
 
+#### 03/15/2017 Wed  
+I found running WGAN much slower on the server(2.5h/epoch). Maybe because there are multiple processes simultaneously including Zheng's project on GPU1.
 
 [***Back*** to subcontents ***GAN***](#gan)  
 
