@@ -5,7 +5,7 @@
 |AC-GAN-burness-tf / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/AC-GAN)|ACGAN|||:sleepy:|
 |[DCGAN-carpedm20-tf](#dcgan-carpedm20-tensorflow) / [repo](https://github.com/carpedm20/DCGAN-tensorflow)|DCGAN|envDL|mnist+celebA|:ok_hand:|
 |DCGAN-soumith-torch-lsun+ImageNet / [repo](https://github.com/soumith/dcgan.torch)|DCGAN|||:sleepy:|
-|[Info-GAN-burness-tf](#info-gan-burness-tensorflow) / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/Info-GAN0)|Info-GAN|envDL|mnist|:ok_hand:|
+|[Info-GAN-burness-tf](#info-gan-burness-tensorflow) / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/Info-GAN)|Info-GAN|envDL|mnist|:ok_hand:|
 |[WassersteinGAN](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:ok_hand:|
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|
 
@@ -86,18 +86,18 @@ After waiting from noon to dusk, I can execute my code after the termination of 
 
 #### 03/13/2017 Mon  
 After 51 hours' running, the program for DCGAN got end. Runtime is 2h/epoch.
-```bash
+```zsh
 [24/25][47380/47392][227859] Loss_D: -0.178149 Loss_G: 0.003281 Loss_D_real: 0.020692 Loss_D_fake 0.198841
 [24/25][47385/47392][227860] Loss_D: -0.160666 Loss_G: 0.049911 Loss_D_real: -0.213569 Loss_D_fake -0.052902
 [24/25][47390/47392][227861] Loss_D: -0.204119 Loss_G: 0.022151 Loss_D_real: -0.128741 Loss_D_fake 0.075378
 [24/25][47392/47392][227862] Loss_D: -0.118183 Loss_G: 0.026365 Loss_D_real: -0.016479 Loss_D_fake 0.101703
 ```
 If I want to use MLP:
-```bash
+```zsh
 CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --mlp_G --ngf 512
 ```
 If I want to to continue training:
-```bash
+```zsh
 # for DCGAN
 CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --netG './samples/netG_epoch_24.pth' --netD './samples/netD_epoch_24.pth'
 
@@ -194,9 +194,9 @@ Mona Lisa, 1503 by Leonardo da Vinci
 |:--:|:--:|:--:|
 |![](./images/OSU-buil-real.jpg 'OSU-buil-real')|![](./images/OSU-pole-sty2.jpg 'OSU-pole-sty2')|![](./images/output-OSU_built_to_pole-sty2-g1-50.jpg 'output-OSU_built_to_pole-sty2-g1-50')|
 |Content|+[Style]|=Result|
-|![](./images/OSU-buil-real.jpg 'OSU-buil-real')|![](./images/Les_Demoiselles_dAvignon.jpg 'Les Demoiselles d'Avignon, 1907, Pablo Picasso')|![](./images/output-OSU-buil-real_to_Les_Demoiselles_dAvignon-g1-55.jpg 'output-OSU-buil-real_to_Les_Demoiselles_dAvignon-g1-55')|
+|![](./images/OSU-buil-real.jpg 'OSU-buil-real')|![](./images/Les_Demoiselles_dAvignon.jpg 'Les Demoiselles dAvignon, 1907, Pablo Picasso')|![](./images/output-OSU-buil-real_to_Les_Demoiselles_dAvignon-g1-55.jpg 'output-OSU-buil-real_to_Les_Demoiselles_dAvignon-g1-55')|
 |Content|+[Style]|=Result|
-|![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/Les_Demoiselles_dAvignon.jpg 'Les Demoiselles d'Avignon, 1907, Pablo Picasso')|![](./images/output-OSU-Valley_to_Les_Demoiselles_dAvignon-g1-50.jpg 'output-OSU-Valley_to_Les_Demoiselles_dAvignon-g1-50')|
+|![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/Les_Demoiselles_dAvignon.jpg 'Les Demoiselles dAvignon, 1907, Pablo Picasso')|![](./images/output-OSU-Valley_to_Les_Demoiselles_dAvignon-g1-50.jpg 'output-OSU-Valley_to_Les_Demoiselles_dAvignon-g1-50')|
 |Content|+[Style]|=Result|
 |![](./images/OSU-Valley-real.jpg 'OSU-Valley-real')|![](./images/OSU-buil-sty3.jpg 'OSU-buil-sty3')|![](./images/output-OSU-Valley_to_OSU-buil-sty3-g1-15.jpg 'output-OSU-Valley_to_OSU-buil-sty3-g1-15')|
 |Content|+[Style]|=Result|
