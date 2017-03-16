@@ -86,6 +86,7 @@ After waiting from noon to dusk, I can execute my code after the termination of 
 
 #### 03/13/2017 Mon  
 After 51 hours' running, the program for DCGAN got end. Runtime is 2h/epoch.
+227862 steps, 227500
 ```zsh
 [24/25][47380/47392][227859] Loss_D: -0.178149 Loss_G: 0.003281 Loss_D_real: 0.020692 Loss_D_fake 0.198841
 [24/25][47385/47392][227860] Loss_D: -0.160666 Loss_G: 0.049911 Loss_D_real: -0.213569 Loss_D_fake -0.052902
@@ -112,7 +113,14 @@ Then I start 3 round of training simultaneously on DCGAN-cont.+loss, DCGAN+loss,
 #### 03/15/2017 Wed  
 I found running WGAN much slower on the server(2.5h/epoch). Maybe because there are multiple processes simultaneously including Zheng's project on GPU1.
 
-[***Back*** to subcontents ***GAN***](#gan)  
+And, the 54GB data is located in HDD(2TB) due to the limited space in SSD (512GB), so the transfer between disk and CPU is another bottleneck for speed.
+
+At afternoon, I record the fast review of generated bedroom images into `.mov`
+ file and convert it to `gif` for further presentation.  
+![](./images/WGAN-DC.gif 'WGAN-DC-animation')
+
+
+ [***Back*** to subcontents ***GAN***](#gan)  
 
 ### StyleSynthesis-machrisaa-tensorflow+VGG19
 
