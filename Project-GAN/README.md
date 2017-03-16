@@ -117,7 +117,12 @@ And, the 54GB data is located in HDD(2TB) due to the limited space in SSD (512GB
 
 At afternoon, I record the fast review of generated bedroom images into `.mov`
  file and convert it to `gif` for further presentation.  
-![](./images/WGAN-DC.gif 'WGAN-DC-animation')
+
+![](./images/WGAN/WGAN-DC.gif 'WGAN-DC-animation')
+
+|1000|50000|227500|
+|:--:|:--:|:--:|
+|![](./images/WGAN/WGAN_DC_p1000.png '1000')|![](./images/WGAN/WGAN_DC_p50000.png '50000')|![](./images/WGAN/WGAN_DC_p227500.png '227500')|
 
 
  [***Back*** to subcontents ***GAN***](#gan)  
