@@ -6,7 +6,7 @@
 |[DCGAN-carpedm20-tf](#dcgan-carpedm20-tensorflow) / [repo](https://github.com/carpedm20/DCGAN-tensorflow)|DCGAN|envDL|mnist+celebA|:ok_hand:|
 |DCGAN-soumith-torch-lsun+ImageNet / [repo](https://github.com/soumith/dcgan.torch)|DCGAN|||:sleepy:|
 |[Info-GAN-burness-tf](#info-gan-burness-tensorflow) / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/Info-GAN)|Info-GAN|envDL|mnist|:ok_hand:|
-|[WassersteinGAN](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:ok_hand:|
+|[WassersteinGAN-torch](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:ok_hand:|
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|
 
 ### Start-GAN
@@ -30,11 +30,19 @@ then updated to `liukaib@lifgroup:/home/liukaib/GAN/Info-GAN-burness-tensorflow`
 
 ### DCGAN-carpedm20-tensorflow
 #### 03/01/2017 Wed
-implement DCGAN with celebA face dataset, from [repo](https://github.com/carpedm20/DCGAN-tensorflow).
+implement DCGAN with celebA face dataset, from [repo](https://github.com/carpedm20/DCGAN-tensorflow). The type of dataset is a folder with 202599 `.jpg` images.  
 dir is `liukaib@lifgroup:/home/liukaib/GAN/DCGAN-tensorflow`, then updated to `liukaib@lifgroup:/home/liukaib/GAN/DCGAN-carpedm20-tensorflow` on 03/11/2017 Sat.
 total train is 24 epoch/7.7h.
 
 After group meeting, I tried mnist dataset and got some results which can be used as gif to illustrate.
+
+#### 03/16/2017 Thu  
+I put Eugene's flower folder into `DCGAN-carpedm20-tensorflow/data` and run with 100 epochs:   
+```zsh
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset flower  --epoch 100 --is_train --is_crop True
+```
+But, the result is not good and we cannot generate any flower images.
+
 
 [***Back*** to subcontents ***GAN***](#gan)  
 
@@ -71,7 +79,7 @@ After several trial of downloading with ssh and tmux, I turned to the desktop an
 #### 03/11/2017 Sat
 In the morning, I put both unzipped LSUN data folder (`bedroom_train_lmdb`/45GB->54GB,`bedroom_val_lmdb`/4MB->6MB) into `/WassersteinGAN`.   
 Since the `lsun-train-folder` is in `./`, the same path as `main.py`, so the run command `python main.py --dataset lsun --dataroot [lsun-train-folder] --cuda` should be
-```bash
+```zsh
 python main.py --dataset lsun --dataroot './' --cuda
 ```
 As is mentioned in the repo's note,
@@ -86,7 +94,12 @@ After waiting from noon to dusk, I can execute my code after the termination of 
 
 #### 03/13/2017 Mon  
 After 51 hours' running, the program for DCGAN got end. Runtime is 2h/epoch.
-227862 steps, 227500
+227862 steps, 455 output_images(227862 steps/500 gaps).  
+batch_size = 64, batches = n_example/ batch_size, interations/steps = n_example/batch_size/5*epochs = batches/5*epochs  
+1 step = 320 input_images
+1 output_image = 500 steps = (500*64*5) = 0.16M input_images  
+the format of output is:  
+[epoch_i][batch_i][gen_iterations]
 ```zsh
 [24/25][47380/47392][227859] Loss_D: -0.178149 Loss_G: 0.003281 Loss_D_real: 0.020692 Loss_D_fake 0.198841
 [24/25][47385/47392][227860] Loss_D: -0.160666 Loss_G: 0.049911 Loss_D_real: -0.213569 Loss_D_fake -0.052902
@@ -103,7 +116,7 @@ If I want to to continue training:
 CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --netG './samples/netG_epoch_24.pth' --netD './samples/netD_epoch_24.pth'
 
 # for MLP
-CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --netG './samples/netG_epoch_24.pth' --netD './samples/netD_epoch_24.pth' --mlp_G --ngf 512
+CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --netG './samples-MLP/netG_epoch_24.pth' --netD './samples-MLP/netD_epoch_24.pth' --mlp_G --ngf 512
 ```
 **Remember**, checkpoint of DCGAN cannot be loaded to a continued MLP execution, or the other way round, i.e. DCGAN mode can only load DCGAN checkpoint `.pth`, and MLP mode can only load MLP checkpoint `.pth`,
 
@@ -115,7 +128,8 @@ I found running WGAN much slower on the server(2.5h/epoch). Maybe because there 
 
 And, the 54GB data is located in HDD(2TB) due to the limited space in SSD (512GB), so the transfer between disk and CPU is another bottleneck for speed.
 
-At afternoon, I record the fast review of generated bedroom images into `.mov`
+My teammates Eugene and Bill have some problems running the projects. I found that tensorflow version has a great update from 0 to 1, which are list in the [official website](https://www.tensorflow.org/install/migration). So I recommand them to install older version `0.12.1` in their virtual environment.
+At afternoon, I copied the generated images from servers with filter command `find`. Then I recorded the fast review of generated bedroom images into `.mov`
  file and convert it to `gif` for further presentation.  
 
 ![](./images/WGAN/WGAN-DC.gif 'WGAN-DC-animation')
@@ -126,6 +140,34 @@ At afternoon, I record the fast review of generated bedroom images into `.mov`
 
 
  [***Back*** to subcontents ***GAN***](#gan)  
+
+#### 03/16/2017 Thu  
+After 62.5 hours' running, all executions DCGAN-cont.+loss, DCGAN+loss, and MLP+loss end.  
+Results are in folders named samples-DCGAN-cont, samples-DCGAN+loss, and samples-MLP, respectively.  
+Now there are 3 types of files: `.png`, `loss_data.csv`, `.pth`.
+
+
+Then I start 2nd round of MLP at 17:21.  
+And 1st round of Eugene's flowers(1,360 images) after putting flower folder into `./17flowers/`, making epochs = 5000 and image_output each 50 steps.
+```zsh
+python main.py --dataset folder --dataroot './17flowers/' --cuda --niter 5000
+```
+
+At night, I use Eugene's handwriting data(3,529 images), putting folder `EnglishHnd` to the server `./` to run WGAN.
+```
+EnglishHnd/Sample001/img001-001.png
+EnglishHnd/Sample001/img001-002.png
+EnglishHnd/Sample001/img001-003.png
+...
+EnglishHnd/Sample062/img001-001.png
+EnglishHnd/Sample062/img001-002.png
+EnglishHnd/Sample062/img001-003.png
+```
+```zsh
+python main.py --dataset folder --dataroot './EnglishHnd/' --cuda --niter 5000
+```
+Almost 1min/epoch
+
 
 ### StyleSynthesis-machrisaa-tensorflow+VGG19
 
