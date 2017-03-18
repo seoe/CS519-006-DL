@@ -43,6 +43,18 @@ CUDA_VISIBLE_DEVICES=1 python main.py --dataset flower  --epoch 100 --is_train -
 ```
 But, the result is not good and we cannot generate any flower images.
 
+#### 03/17/2017 Fri  
+I change the epoch to 3000 to see if the result will get better.  
+```zsh
+python main.py --dataset flower  --epoch 3000 --is_train --is_crop True
+```
+
+#### 03/18/2017 Sat
+The generated images is not consistent to the corresponding position. I believe it's because the type of flower in the same folder are too different with unique features. Then I tried another time with:  
+```zsh
+python main.py --dataset flower  --epoch 1000 --is_train --is_crop True
+```
+
 
 [***Back*** to subcontents ***GAN***](#gan)  
 
@@ -176,13 +188,24 @@ python main.py --dataset folder --dataroot './EnglishHnd/' --cuda --niter 5000
 Almost 1min/epoch
 
 #### 03/17/2017 Fri  
-I check the result of training, flowers ends first while EnglishHnd still finished less than one third...  
+I check the result of training, flowers ends first while EnglishHnd is still on the stage of less than one third...  
 Results of `python main.py --dataset folder --dataroot './17flowers/' --cuda --niter 5000`:  
 ```zsh
  [4999/5000][15/22][24894] Loss_D: -0.595433 Loss_G: 0.157938 Loss_D_real: -0.189094 Loss_D_fake 0.406339
  [4999/5000][20/22][24895] Loss_D: -0.495998 Loss_G: 0.419604 Loss_D_real: -0.469681 Loss_D_fake 0.026317
  [4999/5000][22/22][24896] Loss_D: -0.504061 Loss_G: 0.375015 Loss_D_real: -0.432782 Loss_D_fake 0.071279
 ```
+And the generated images are good.
+
+
+#### 03/18/2017 Fri  
+EnglishHnd and bedroom-MLP-cont is still running.  
+I tried to extract the number images from EnglishHnd. First option is making 0~9 numbers into `NumHnd` with separate folders, the other option is putting them into one folder `NumHnd-one` for WGAN.
+```zsh
+python main.py --dataset folder --dataroot './NumHnd/' --cuda --niter 1000 --batchSize 16
+python main.py --dataset folder --dataroot './NumHnd-one/' --cuda --niter 1000 --batchSize 16
+```
+each of them takes 7 second/epoch.
 
 ### StyleSynthesis-machrisaa-tensorflow+VGG19
 
