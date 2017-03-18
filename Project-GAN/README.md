@@ -94,10 +94,17 @@ After waiting from noon to dusk, I can execute my code after the termination of 
 
 #### 03/13/2017 Mon  
 After 51 hours' running, the program for DCGAN got end. Runtime is 2h/epoch.
-227862 steps, 455 output_images(227862 steps/500 gaps).  
-batch_size = 64, batches = n_example/ batch_size, interations/steps = n_example/batch_size/5*epochs = batches/5*epochs  
-1 step = 320 input_images
-1 output_image = 500 steps = (500*64*5) = 0.16M input_images  
+In total, N = 3M input_images, E = 25 epochs.  
+Training parameters are:   
+- batch_size = 64 input_images
+- output_image_step = 500 iterations  
+- iteration_step = 5 batches
+
+47392 batches = N / batch_size = 3M / 64  
+227862 iterations = N / batch_size / iteration_step \* epochs = batches / iteration_step \* epochs = batches / 5 \* epochs  
+455 output_images = iterations / output_image_step = 227862 / 500  
+1 iteration = iteration_step \* batch_size = (5\*64) = 320 input_images  
+1 output_image = 500 iterations = (500\*64\*5) = 0.16M input_images  
 the format of output is:  
 [epoch_i][batch_i][gen_iterations]
 ```zsh
@@ -147,7 +154,7 @@ Results are in folders named samples-DCGAN-cont, samples-DCGAN+loss, and samples
 Now there are 3 types of files: `.png`, `loss_data.csv`, `.pth`.
 
 
-Then I start 2nd round of MLP at 17:21.  
+Then I start 2nd round of MLP at 17:21. 1.87 second/step *   
 And 1st round of Eugene's flowers(1,360 images) after putting flower folder into `./17flowers/`, making epochs = 5000 and image_output each 50 steps.
 ```zsh
 python main.py --dataset folder --dataroot './17flowers/' --cuda --niter 5000
@@ -168,6 +175,14 @@ python main.py --dataset folder --dataroot './EnglishHnd/' --cuda --niter 5000
 ```
 Almost 1min/epoch
 
+#### 03/17/2017 Fri  
+I check the result of training, flowers ends first while EnglishHnd still finished less than one third...  
+Results of `python main.py --dataset folder --dataroot './17flowers/' --cuda --niter 5000`:  
+```zsh
+ [4999/5000][15/22][24894] Loss_D: -0.595433 Loss_G: 0.157938 Loss_D_real: -0.189094 Loss_D_fake 0.406339
+ [4999/5000][20/22][24895] Loss_D: -0.495998 Loss_G: 0.419604 Loss_D_real: -0.469681 Loss_D_fake 0.026317
+ [4999/5000][22/22][24896] Loss_D: -0.504061 Loss_G: 0.375015 Loss_D_real: -0.432782 Loss_D_fake 0.071279
+```
 
 ### StyleSynthesis-machrisaa-tensorflow+VGG19
 
