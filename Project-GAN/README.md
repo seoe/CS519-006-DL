@@ -316,8 +316,8 @@ Mona Lisa, 1503 by Leonardo da Vinci
 ![](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')
 ![](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')
 
-![](https://youtu.be/e50WBRManWU 'WGAN flowers')
-![](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC ')
+[![](https://i.ytimg.com/vi/e50WBRManWU/1.jpg?time=1489912676284)](https://youtu.be/e50WBRManWU 'WGAN flowers')
+![](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')
 This project can be executed on **TitanX** server under my `envDL` virtualenv other than `keras_theano_py2`.
 
 [***Back*** to subcontents ***GAN***](#gan)
