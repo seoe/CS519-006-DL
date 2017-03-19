@@ -9,6 +9,17 @@
 |[WassersteinGAN-torch](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:ok_hand:|  
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|  
 
+
+[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')  
+[Video for Style OSU Valley to starry night](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')  
+[Video for Style OSU Valley to OSU buil sty3](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')  
+[Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')  
+[Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
+
+[Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)
+[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
+[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
+
 ### Start-GAN
 #### 02/14/2017 Tue midnight  
 Intend to implement a GAN project [Generative Adversarial Text-to-Image Synthesis](https://github.com/reedscot/icml2016), needs Torch, CuDNN, and the display package as prerequisites. Then I started to configure them. The issues I has is listed in [torch installation](#torch-installation)。  
@@ -308,17 +319,8 @@ Mona Lisa, 1503 by Leonardo da Vinci
 |![](./images/OSU-pole-sty1.jpg 'OSU-pole-sty1')|![](./images/OSU-pole-real.jpg 'OSU-pole-real')|![](./images/OSU-pole-sty1-output-g0-80.jpg 'OSU-pole-sty1-output-g0-80')|
 |Content|+[Style]|=Result|
 |![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
-|Content|+[Style]|=Result|
+|Content|+[Style]|=Result|  
 
-
-[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')  
-[Video for Style OSU Valley to starry night](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')  
-[Video for Style OSU Valley to OSU buil sty3](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')  
-[Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')  
-[Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
-
-[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
-[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
 
 This project can be executed on **TitanX** server under my `envDL` virtualenv other than `keras_theano_py2`.
 
