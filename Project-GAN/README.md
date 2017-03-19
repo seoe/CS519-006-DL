@@ -310,14 +310,16 @@ Mona Lisa, 1503 by Leonardo da Vinci
 |![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
 |Content|+[Style]|=Result|
 
-[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')
-[Video for Style OSU Valley to starry night](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')
-[Video for Style OSU Valley to OSU buil sty3](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')
-[Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')
-[Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')
 
-[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')
-[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')
+[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')  
+[Video for Style OSU Valley to starry night](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')  
+[Video for Style OSU Valley to OSU buil sty3](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')  
+[Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')  
+[Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
+
+[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
+[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
+
 This project can be executed on **TitanX** server under my `envDL` virtualenv other than `keras_theano_py2`.
 
 [***Back*** to subcontents ***GAN***](#gan)
