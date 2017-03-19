@@ -310,6 +310,11 @@ Mona Lisa, 1503 by Leonardo da Vinci
 |![](./images/starry_night_paint.jpg 'starry_night_paint')|![](./images/starry_night_real.jpg 'starry_night_real')|![](./images/starry_night_output-g1-80.jpg 'starry_night_output-g1-80')|
 |Content|+[Style]|=Result|
 
+![](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')
+![](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')
+![](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')
+![](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')
+![](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')
 This project can be executed on **TitanX** server under my `envDL` virtualenv other than `keras_theano_py2`.
 
 [***Back*** to subcontents ***GAN***](#gan)
