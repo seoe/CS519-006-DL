@@ -17,8 +17,37 @@
 [Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
 
 [Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)
+[Video for DCGAN mixed flower](https://youtu.be/298K3OalzKM)
+[Video for DCGAN sunflower](https://youtu.be/1uC40kYTr8I)
 [Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
 [Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
+
+
+
+
+All convolutional net (Springenberg et al., 2014)
+D: spatial pooling -> strided convolutions, learn spatial downsampling
+G: spatial pooling -> fractional-strided convolutions, learn spatial upsampling
+
+Remove fully connected hidden layers for deeper architectures
+average pooling increased model stability but hurt convergence speed
+
+Batch Normalization (Ioffe & Szegedy, 2015)
+proved critical to get deep generators to begin learning, preventing the G from collapsing all samples to a single
+point which is a common failure mode observed in GANs
+
+activation:
+D: LeakyReLU for all layers (Maas et al., 2013) (Xu et al., 2015).
+G: Tanh for output, ReLU for all other layers.
+
+
+We observed that using a bounded activation allowed the model to learn more quickly to saturate and cover the color space of the training distribution.
+Within the discriminator we found the leaky rectified activation (Maas et al., 2013) (Xu et al., 2015) to work
+well, especially for higher resolution modeling.
+This is in contrast to the original GAN paper, which used the maxout activation (Goodfellow et al., 2013).
+
+
+
 
 ### Start-GAN
 #### 02/14/2017 Tue midnight  
@@ -151,16 +180,15 @@ CUDA_VISIBLE_DEVICES=1 python main.py --dataset lsun --dataroot './' --cuda --ne
 **Remember**, checkpoint of DCGAN cannot be loaded to a continued MLP execution, or the other way round, i.e. DCGAN mode can only load DCGAN checkpoint `.pth`, and MLP mode can only load MLP checkpoint `.pth`,
 
 At night, I add a function to save 4 types of loss into `.csv` so that I can plot some curves later.  
-Then I start 3 round of training simultaneously on DCGAN-cont.+loss, DCGAN+loss, and MLP+loss.
+Then I start 3 rounds of training simultaneously on DCGAN-cont.+loss, DCGAN+loss, and MLP+loss.
 
 #### 03/15/2017 Wed  
 I found running WGAN much slower on the server(2.5h/epoch). Maybe because there are multiple processes simultaneously including Zheng's project on GPU1.
 
 And, the 54GB data is located in HDD(2TB) due to the limited space in SSD (512GB), so the transfer between disk and CPU is another bottleneck for speed.
 
-My teammates Eugene and Bill have some problems running the projects. I found that tensorflow version has a great update from 0 to 1, which are list in the [official website](https://www.tensorflow.org/install/migration). So I recommand them to install older version `0.12.1` in their virtual environment.
-At afternoon, I copied the generated images from servers with filter command `find`. Then I recorded the fast review of generated bedroom images into `.mov`
- file and convert it to `gif` for further presentation.  
+My teammates Eugene and Bill have some problems running the projects. I found that tensorflow version has a great update from 0 to 1, which are listed in the [official website](https://www.tensorflow.org/install/migration). So I recommend them to install older version `0.12.1` in their virtual environment.
+At afternoon, I copied the generated images from servers with filter command `find`. Then I recorded the fast review of generated bedroom images into `.mov` file and converted it to `gif` for further presentation.  
 
 ![](./images/WGAN/WGAN-DC.gif 'WGAN-DC-animation')
 
