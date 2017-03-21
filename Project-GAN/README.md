@@ -151,7 +151,7 @@ I found running WGAN much slower on the server(2.5h/epoch). Maybe because there 
 And, the 54GB data is located in HDD(2TB) due to the limited space in SSD (512GB), so the transfer between disk and CPU is another bottleneck for speed.
 
 My teammates Eugene and Bill have some problems running the projects. I found that tensorflow version has a great update from 0 to 1, which are listed in the [official website](https://www.tensorflow.org/install/migration). So I recommend them to install older version `0.12.1` in their virtual environment.
-At afternoon, I copied the generated images from servers with filter command `find`. Then I recorded the fast review of generated bedroom images into `.mov` file and converted it to `gif` for further presentation.  
+At afternoon, I copied the generated images from servers with filter command `find`. Then I recorded the fast review of generated bedroom images into `.mov` file and converted it to `.gif` for further presentation.  
 
 ![](./images/WGAN/WGAN-DC.gif 'WGAN-DC-animation')
 
@@ -333,3 +333,28 @@ This project can be executed on **TitanX** server under my `envDL` virtualenv ot
 [Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')  
 [Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
 
+
+
+### structure of report
+- Abstract (E)
+- introduction (E)
+- Related work
+    - GAN (E,K)
+    - Style (B)
+- methods
+    - DCGAN (E)
+    - WGAN (K)
+    - Style (B)
+- Experiment & result
+    - DCGAN
+        - mnist (K)
+        - celebA (K)
+        - flower (E)
+    - WGAN
+        - flower (K)
+        - bedroom (k)
+    - Style
+        - pooling (B)
+- Discussion
+- Conclusion
+- Reference
