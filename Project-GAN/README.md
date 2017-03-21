@@ -10,12 +10,13 @@
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|  
 
 
-[video record](#video)
+- [video record](#video)
+- [structure of report](#structure-of-report)
 
 ### Start-GAN
 #### 02/14/2017 Tue midnight  
 Intend to implement a GAN project [Generative Adversarial Text-to-Image Synthesis](https://github.com/reedscot/icml2016), needs Torch, CuDNN, and the display package as prerequisites. Then I started to configure them. The issues I has is listed in [torch installation](#torch-installation)。  
-GANs have been primarily applied to modelling natural images. They are now producing [excellent results in image generation tasks](https://arxiv.org/abs/1511.06434), generating images that are significantly sharper than those trained using other leading generative methods based on maximum likelihood training objectives.
+GANs have been primarily applied to modeling natural images. They are now producing [excellent results in image generation tasks](https://arxiv.org/abs/1511.06434), generating images that are significantly sharper than those trained using other leading generative methods based on maximum likelihood training objectives.
 
 A [project](http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow/) of Approximating a 1D Gaussian distribution demo+[code](https://github.com/AYLIEN/gan-intro), with the video
 [Generative Adversarial Network visualization](https://youtu.be/mObnwR-u8pc).
