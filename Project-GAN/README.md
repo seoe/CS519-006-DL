@@ -356,6 +356,6 @@ This project can be executed on **TitanX** server under my `envDL` virtualenv ot
         - bedroom (k)
     - Style
         - pooling (B)
-- Discussion
-- Conclusion
+- Discussion (added in experiment)
+- Conclusion (E)
 - Reference
