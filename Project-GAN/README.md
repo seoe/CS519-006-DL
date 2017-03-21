@@ -10,19 +10,7 @@
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|  
 
 
-[Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)
-[Video for DCGAN mixed flower](https://youtu.be/298K3OalzKM)
-[Video for DCGAN sunflower](https://youtu.be/1uC40kYTr8I)
-
-[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
-[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
-
-[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')  
-[Video for Style OSU Valley to starry night](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')  
-[Video for Style OSU Valley to OSU buil sty3](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')  
-[Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')  
-[Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
-
+[video record](#video)
 
 ### Start-GAN
 #### 02/14/2017 Tue midnight  
@@ -328,3 +316,20 @@ Mona Lisa, 1503 by Leonardo da Vinci
 This project can be executed on **TitanX** server under my `envDL` virtualenv other than `keras_theano_py2`.
 
 [***Back*** to subcontents ***GAN***](#gan)
+
+
+### Video
+
+[Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)
+[Video for DCGAN mixed flower](https://youtu.be/298K3OalzKM)
+[Video for DCGAN sunflower](https://youtu.be/1uC40kYTr8I)
+
+[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
+[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
+
+[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')  
+[Video for Style OSU Valley to starry night](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')  
+[Video for Style OSU Valley to OSU buil sty3](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')  
+[Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')  
+[Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
+
