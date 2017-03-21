@@ -2,51 +2,26 @@
 
 |Project|Algorithm|venv|dataset|result|  
 |:--:|:--:|:--:|:--:|:--:|  
-|AC-GAN-burness-tf / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/AC-GAN)|ACGAN|||:sleepy:|  
+|AC-GAN-burness-tf / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/AC-GAN)|ACGAN|||:sleeping:|  
 |[DCGAN-carpedm20-tf](#dcgan-carpedm20-tensorflow) / [repo](https://github.com/carpedm20/DCGAN-tensorflow)|DCGAN|envDL|mnist+celebA|:ok_hand:|  
-|DCGAN-soumith-torch-lsun+ImageNet / [repo](https://github.com/soumith/dcgan.torch)|DCGAN|||:sleepy:|  
+|DCGAN-soumith-torch-lsun+ImageNet / [repo](https://github.com/soumith/dcgan.torch)|DCGAN|||:sleeping:|  
 |[Info-GAN-burness-tf](#info-gan-burness-tensorflow) / [repo](https://github.com/burness/tensorflow-101/tree/master/GAN/Info-GAN)|Info-GAN|envDL|mnist|:ok_hand:|  
 |[WassersteinGAN-torch](#wassersteingan) / [repo](https://github.com/martinarjovsky/WassersteinGAN)|WGAN|envDL/envTorch|LSUN+mnist|:ok_hand:|  
 |[StyleSynthesis-machrisaa-tf+VGG19](#stylesynthesis-machrisaa-tensorflowvgg19) / [repo](https://github.com/machrisaa/stylenet)|-|envDL|random img|:ok_hand:|  
 
 
-[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')  
+[Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)
+[Video for DCGAN mixed flower](https://youtu.be/298K3OalzKM)
+[Video for DCGAN sunflower](https://youtu.be/1uC40kYTr8I)
+
+[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
+[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
+
+[Video for Style CraterLake to starry night](https://youtu.be/Au0RY8onKMk 'Style CraterLake to starry night')  
 [Video for Style OSU Valley to starry night](https://youtu.be/TsWGWEtyIPg 'Style OSU Valley to starry night')  
 [Video for Style OSU Valley to OSU buil sty3](https://youtu.be/xIMjj269z7w 'Style OSU Valley to OSU buil sty3')  
 [Video for Style OSU Valley to Les Demoiselles dAvignon](https://youtu.be/Tg4G3nEljf8 'Style OSU Valley to Les Demoiselles dAvignon')  
 [Video for Style husky to the scream](https://youtu.be/MmTYH6zKO9g 'Style husky to the scream')  
-
-[Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)
-[Video for DCGAN mixed flower](https://youtu.be/298K3OalzKM)
-[Video for DCGAN sunflower](https://youtu.be/1uC40kYTr8I)
-[Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
-[Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
-
-
-
-
-All convolutional net (Springenberg et al., 2014)
-D: spatial pooling -> strided convolutions, learn spatial downsampling
-G: spatial pooling -> fractional-strided convolutions, learn spatial upsampling
-
-Remove fully connected hidden layers for deeper architectures
-average pooling increased model stability but hurt convergence speed
-
-Batch Normalization (Ioffe & Szegedy, 2015)
-proved critical to get deep generators to begin learning, preventing the G from collapsing all samples to a single
-point which is a common failure mode observed in GANs
-
-activation:
-D: LeakyReLU for all layers (Maas et al., 2013) (Xu et al., 2015).
-G: Tanh for output, ReLU for all other layers.
-
-
-We observed that using a bounded activation allowed the model to learn more quickly to saturate and cover the color space of the training distribution.
-Within the discriminator we found the leaky rectified activation (Maas et al., 2013) (Xu et al., 2015) to work
-well, especially for higher resolution modeling.
-This is in contrast to the original GAN paper, which used the maxout activation (Goodfellow et al., 2013).
-
-
 
 
 ### Start-GAN
