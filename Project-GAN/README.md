@@ -321,9 +321,9 @@ This project can be executed on **TitanX** server under my `envDL` virtualenv ot
 
 ### Video
 
-[Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)
-[Video for DCGAN mixed flower](https://youtu.be/298K3OalzKM)
-[Video for DCGAN sunflower](https://youtu.be/1uC40kYTr8I)
+[Video for DCGAN mnist](https://youtu.be/Mbb6TD_8p98)  
+[Video for DCGAN mixed flower](https://youtu.be/298K3OalzKM)  
+[Video for DCGAN sunflower](https://youtu.be/1uC40kYTr8I)  
 
 [Video for WGAN flowers](https://youtu.be/e50WBRManWU 'WGAN flowers')  
 [Video for WGAN-LSUN-bedroom](https://youtu.be/wQKdqHHEvg0 'WGAN-bedroom-DC')  
