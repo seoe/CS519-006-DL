@@ -1,4 +1,4 @@
-# CS519-006-DL
+# CS519-006-DL (now CS535)
 Deep Learning 2017 Winter
 ## Assignment #2: CIFAR-10 Image Classification using Fully Connected Neural Network
 [code and description](./Assignment2)
