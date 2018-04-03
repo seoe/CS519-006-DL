@@ -1,3 +1,8 @@
+Team members:
+* Kaibo Liu
+* Eugene Soe  
+* Zehuan Chen
+
 ## GAN
 
 |Project|Algorithm|venv|dataset|result|  
